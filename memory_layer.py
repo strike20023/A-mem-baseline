@@ -32,11 +32,12 @@ class OpenAIController(BaseLLMController):
         try:
             from openai import OpenAI
             self.model = model
+            api_base = os.getenv('OPENAI_API_BASE')
             if api_key is None:
                 api_key = os.getenv('OPENAI_API_KEY')
             if api_key is None:
                 raise ValueError("OpenAI API key not found. Set OPENAI_API_KEY environment variable.")
-            self.client = OpenAI(api_key=api_key)
+            self.client = OpenAI(api_key=api_key, base_url=api_base)
         except ImportError:
             raise ImportError("OpenAI package not found. Install it with: pip install openai")
     

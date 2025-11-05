@@ -1,0 +1,1 @@
+python test_advanced.py --model /data/models/huangzhe/Qwen3-30B-A3B --output output.json --ratio 0.2 --backend openai
