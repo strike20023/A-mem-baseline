@@ -5,7 +5,7 @@ if [ ! -d "venv" ]; then
         echo "uv 未安装，尝试安装"
         curl -LsSf https://astral.sh/uv/install.sh | sh
     fi
-    uv venv --seed --python 3.13.5 venv
+    uv venv --seed --python 3.13 venv
     source venv/bin/activate
     uv pip install -r requirements.txt
 fi
