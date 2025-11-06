@@ -1,4 +1,4 @@
 __pycache__/
 venv/
 .DS_Store
-data/hf_data/
+data/hf_data/*
